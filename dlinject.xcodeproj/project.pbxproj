@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E215015223D696E5002ED12D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215015123D696E5002ED12D /* main.swift */; };
+		E215016123D69953002ED12D /* Injector.m in Sources */ = {isa = PBXBuildFile; fileRef = E215016023D69953002ED12D /* Injector.m */; };
+		E215016323D69A44002ED12D /* BSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215016223D69A44002ED12D /* BSD.swift */; };
+		E215016523D69AC0002ED12D /* Mach.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215016423D69AC0002ED12D /* Mach.swift */; };
+		E215017123D7E59E002ED12D /* lorgnette.c in Sources */ = {isa = PBXBuildFile; fileRef = E215016E23D7E59E002ED12D /* lorgnette.c */; };
+		E25B640923DD508100FDF738 /* MachTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B640823DD508100FDF738 /* MachTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		E215014E23D696E5002ED12D /* dlinject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dlinject; sourceTree = BUILT_PRODUCTS_DIR; };
 		E215015123D696E5002ED12D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E215015C23D69933002ED12D /* dlinject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dlinject-Bridging-Header.h"; sourceTree = "<group>"; };
+		E215015F23D69953002ED12D /* Injector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Injector.h; sourceTree = "<group>"; };
+		E215016023D69953002ED12D /* Injector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Injector.m; sourceTree = "<group>"; };
+		E215016223D69A44002ED12D /* BSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSD.swift; sourceTree = "<group>"; };
+		E215016423D69AC0002ED12D /* Mach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach.swift; sourceTree = "<group>"; };
+		E215016E23D7E59E002ED12D /* lorgnette.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lorgnette.c; sourceTree = "<group>"; };
+		E215016F23D7E59E002ED12D /* lorgnette-structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lorgnette-structs.h"; sourceTree = "<group>"; };
+		E215017023D7E59E002ED12D /* lorgnette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lorgnette.h; sourceTree = "<group>"; };
+		E25B640723DD508100FDF738 /* MachTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MachTask.h; sourceTree = "<group>"; };
+		E25B640823DD508100FDF738 /* MachTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MachTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				E215015123D696E5002ED12D /* main.swift */,
+				E215016223D69A44002ED12D /* BSD.swift */,
+				E215016423D69AC0002ED12D /* Mach.swift */,
+				E215015F23D69953002ED12D /* Injector.h */,
+				E215016023D69953002ED12D /* Injector.m */,
+				E25B640723DD508100FDF738 /* MachTask.h */,
+				E25B640823DD508100FDF738 /* MachTask.m */,
+				E215016F23D7E59E002ED12D /* lorgnette-structs.h */,
+				E215016E23D7E59E002ED12D /* lorgnette.c */,
+				E215017023D7E59E002ED12D /* lorgnette.h */,
+				E215015C23D69933002ED12D /* dlinject-Bridging-Header.h */,
 			);
 			path = dlinject;
 			sourceTree = "<group>";
@@ -94,6 +119,7 @@
 				TargetAttributes = {
 					E215014D23D696E5002ED12D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -121,6 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E215015223D696E5002ED12D /* main.swift in Sources */,
+				E215016323D69A44002ED12D /* BSD.swift in Sources */,
+				E215016523D69AC0002ED12D /* Mach.swift in Sources */,
+				E215017123D7E59E002ED12D /* lorgnette.c in Sources */,
+				E25B640923DD508100FDF738 /* MachTask.m in Sources */,
+				E215016123D69953002ED12D /* Injector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +195,6 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -184,6 +214,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -237,16 +268,21 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		E215015623D696E5002ED12D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3H46H8HHV6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dlinject/dlinject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,10 +290,13 @@
 		E215015723D696E5002ED12D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3H46H8HHV6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dlinject/dlinject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
